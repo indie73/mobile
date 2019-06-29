@@ -7,8 +7,6 @@
                 :items="['Шаги','Велосипед','Плавание','Фитнес']"
                 label="Тип"
                 hide-details
-                v-on:change="changeType()"
-                v-model="type"
         ></v-select>
       </v-flex>
       <v-flex class="add__line">

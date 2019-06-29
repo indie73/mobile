@@ -20,7 +20,6 @@
     </div>
 
     <v-bottom-nav fixed absolute
-                  :active.sync="bottomNav"
                   :value="true"
                   absolute
                   id="foooter"
