@@ -1,15 +1,10 @@
 <template>
   <div>
-    <v-btn
-            color="green"
-            dark
-            fixed
-            top
-            right
-            fab
-    >
-      <v-icon>add</v-icon>
-    </v-btn>
+    <router-link :to="'add'" class="v-btn v-btn--floating v-btn--fixed v-btn--right v-btn--top theme--dark green add-btn" >
+      <div class="v-btn__content">
+        <v-icon dark>add</v-icon>
+      </div>
+    </router-link>
     <v-flex goals-header>
       <v-avatar
               :size="48"
@@ -190,5 +185,10 @@
 
   .v-btn--top:not(.v-btn--absolute) {
     top: 83px;
+  }
+
+  .add-btn .v-btn__content {
+    width: auto;
+    height: auto;
   }
 </style>

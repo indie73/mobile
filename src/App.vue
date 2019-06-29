@@ -1,6 +1,9 @@
 <template>
   <v-app>
     <v-toolbar id="header" app v-if="!['login'].includes($route.name)" >
+      <router-link :to="'home'" v-if="['add'].includes($route.name)" class="btn-back">
+        <v-icon>arrow_back</v-icon>
+      </router-link>
       <v-flex text-xs-center>
         <v-toolbar-title>
           БЕГУ.ЖИВУ
@@ -125,6 +128,27 @@ export default {
 
   .twenty {
     width: 20%;
+  }
+
+  .container-fluid {
+    width: 100%;
+    padding-right: 15px;
+    padding-left: 15px;
+    margin-right: auto;
+    margin-left: auto;
+  }
+
+  .btn-back {
+    position: absolute;
+    left: 15px;
+    top: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 30px;
+    height: 30px;
+    text-decoration: none;
+    transform: translateY(-50%);
   }
 
 </style>
