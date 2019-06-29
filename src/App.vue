@@ -6,7 +6,10 @@
       </router-link>
       <v-flex text-xs-center>
         <v-toolbar-title>
-          БЕГУ.ЖИВУ
+          <img
+                  :src="require('./assets/logo-text.png')"
+                  class="header-logo"
+                  alt="">
         </v-toolbar-title>
       </v-flex>
 
@@ -25,16 +28,6 @@
                   id="foooter"
                   v-if="!['login'].includes($route.name)"
     >
-      <router-link :to="'home'" style="text-decoration: none;">
-      <v-btn
-              color="teal"
-              flat
-              value="recent"
-      >
-        <span>Цели</span>
-        <v-icon>stars</v-icon>
-      </v-btn>
-      </router-link>
 
       <router-link :to="'events'" style="text-decoration: none;">
       <v-btn
@@ -45,6 +38,18 @@
         <span>Заработать</span>
         <v-icon>favorite</v-icon>
       </v-btn>
+      </router-link>
+
+
+      <router-link :to="'home'" style="text-decoration: none;">
+        <v-btn
+                color="teal"
+                flat
+                value="recent"
+        >
+          <span>Цели</span>
+          <v-icon>stars</v-icon>
+        </v-btn>
       </router-link>
 
       <router-link :to="'shop'" style="text-decoration: none;">
@@ -150,6 +155,11 @@ export default {
     height: 30px;
     text-decoration: none;
     transform: translateY(-50%);
+  }
+
+  .header-logo {
+    vertical-align: middle;
+    height: 24px;
   }
 
 </style>
