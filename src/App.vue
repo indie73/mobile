@@ -27,7 +27,7 @@
               value="recent"
       >
         <span>Цели</span>
-        <v-icon>history</v-icon>
+        <v-icon>stars</v-icon>
       </v-btn>
       </router-link>
 
@@ -49,7 +49,7 @@
                 value="nearby"
         >
           <span>Обменять</span>
-          <v-icon>place</v-icon>
+          <v-icon>shopping_cart</v-icon>
         </v-btn>
       </router-link>
     </v-bottom-nav>
