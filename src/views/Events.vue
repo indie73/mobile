@@ -1,6 +1,5 @@
 <template>
-  <div class="login">
-    <h1>События</h1>
+  <div>
     <v-card>
         <v-container
           fluid
