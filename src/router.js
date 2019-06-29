@@ -7,7 +7,7 @@ Vue.use(Router)
 export default new Router({
   routes: [
     {
-      path: '/',
+      path: '/home',
       name: 'home',
       component: Home
     },
@@ -22,7 +22,7 @@ export default new Router({
       }
     },
     {
-      path: '/login',
+      path: '/',
       name: 'login',
       // route level code-splitting
       // this generates a separate chunk (about.[hash].js) for this route
