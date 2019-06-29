@@ -18,10 +18,11 @@
       <div class="login__phone" v-if="sendedSMS">
         <div class="login__phone__label">Код:</div>
         <v-text-field
-                type="tel"
+                type="password"
                 placeholder="****"
                 hide-details
                 value=""
+                maxlength="4"
                 required
         ></v-text-field>
       </div>
