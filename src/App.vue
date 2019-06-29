@@ -9,7 +9,10 @@
 
     </v-toolbar>
 
-    <div class="ScrollableWrapper" style="padding-top: 20px; padding-bottom: 50px;text-align: -webkit-left;">
+    <div v-if="['login'].includes($route.name)" class="ScrollableWrapper" style="text-align: -webkit-left;">
+      <router-view/>
+    </div>
+    <div v-else class="ScrollableWrapper" style="padding-top: 65px; padding-bottom: 65px;text-align: -webkit-left;">
       <router-view/>
     </div>
 
@@ -102,12 +105,11 @@ export default {
     width: 100%;
   }
   .ScrollableWrapper {
-    top: 45px;
+    top: 0;
     left:0;
     right:0;
     bottom:0;
     position:absolute;
-    margin-bottom:15px;
   }
   #foooter {
     position: fixed;
