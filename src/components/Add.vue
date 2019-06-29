@@ -36,10 +36,6 @@
 </script>
 
 <style>
-  .title {
-    padding: 0 15px;
-  }
-
   .add {
     padding: 15px;
   }
