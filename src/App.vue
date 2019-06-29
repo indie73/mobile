@@ -100,7 +100,6 @@ export default {
   }
   /*########### CUSTOM STYLE ###########*/
   header {
-    background-color: #008bd2;
     color: white;
     text-align: center;
     padding-top: 0px;
@@ -162,4 +161,11 @@ export default {
     height: 24px;
   }
 
+  .theme--light.application {
+    background: #ffffff;
+  }
+
+  .theme--light.v-toolbar {
+    background-color: #ffffff;
+  }
 </style>
