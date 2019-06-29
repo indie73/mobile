@@ -1,24 +1,58 @@
 <template>
   <v-app>
-    <v-toolbar app v-if="!['login'].includes($route.name)" >
-      <v-toolbar-title  class="headline text-uppercase">
-        <span>Vuetify</span>
-        <span class="font-weight-light">MATERIAL DESIGN</span>
-      </v-toolbar-title>
-      <v-spacer></v-spacer>
-      <v-btn
-        flat
-        href="https://github.com/vuetifyjs/vuetify/releases/latest"
-        target="_blank"
-      >
-        <span class="mr-2">Latest Release</span>
-        <v-icon>open_in_new</v-icon>
-      </v-btn>
+    <v-toolbar id="header" app v-if="!['login'].includes($route.name)" >
+      <v-flex text-xs-center>
+        <v-toolbar-title>
+          БЕГУ.ЖИВУ
+        </v-toolbar-title>
+      </v-flex>
+
     </v-toolbar>
 
-    <v-content>
+    <div class="ScrollableWrapper" style="padding-top: 20px; padding-bottom: 50px;text-align: -webkit-left;">
       <router-view/>
-    </v-content>
+    </div>
+
+    <v-bottom-nav fixed absolute
+                  :active.sync="bottomNav"
+                  :value="true"
+                  absolute
+                  id="foooter"
+                  v-if="!['login'].includes($route.name)"
+    >
+      <router-link :to="'home'" style="text-decoration: none;">
+      <v-btn
+              color="teal"
+              flat
+              value="recent"
+      >
+        <span>Цели</span>
+        <v-icon>history</v-icon>
+      </v-btn>
+      </router-link>
+
+      <router-link :to="'events'" style="text-decoration: none;">
+      <v-btn
+              color="teal"
+              flat
+              value="favorites"
+      >
+        <span>Заработать</span>
+        <v-icon>favorite</v-icon>
+      </v-btn>
+      </router-link>
+
+      <router-link :to="'shop'" style="text-decoration: none;">
+        <v-btn
+                color="teal"
+                flat
+                value="nearby"
+        >
+          <span>Обменять</span>
+          <v-icon>place</v-icon>
+        </v-btn>
+      </router-link>
+    </v-bottom-nav>
   </v-app>
 </template>
 
@@ -33,3 +67,64 @@ export default {
   }
 }
 </script>
+
+<style>
+
+  /*########### SCROLLING HANDLING ###########*/
+  html {
+    overflow: hidden;
+    height: 100%;
+  }
+  body {
+    box-sizing: border-box;
+    overflow: hidden;
+    height: 100%;
+  }
+  header,footer {
+    overflow: hidden;
+  }
+
+  .ScrollableWrapper {
+    overflow: scroll;
+    -webkit-overflow-scrolling: touch; /*to make it smooth as native*/
+  }
+  /*########### CUSTOM STYLE ###########*/
+  header {
+    background-color: #008bd2;
+    color: white;
+    text-align: center;
+    padding-top: 0px;
+    margin: 0px;
+    position: fixed;
+    z-index: 1000;
+    top: 0px;
+    left: 0px;
+    width: 100%;
+  }
+  .ScrollableWrapper {
+    top: 45px;
+    left:0;
+    right:0;
+    bottom:0;
+    position:absolute;
+    margin-bottom:15px;
+  }
+  #foooter {
+    position: fixed;
+    bottom:0px;
+    z-index: 1;
+    overflow: auto;
+    background-color: #ffffff;
+    width:100%;
+  }
+  body {
+    margin: 0px;
+    padding: 0px;
+
+  }
+
+  .twenty {
+    width: 20%;
+  }
+
+</style>
