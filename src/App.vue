@@ -168,4 +168,12 @@ export default {
   .theme--light.v-toolbar {
     background-color: #ffffff;
   }
+
+  .v-toolbar--fixed {
+    z-index: 55;
+  }
+
+  .v-item-group.v-bottom-nav .v-btn--active .v-btn__content {
+    font-size: 12px;
+  }
 </style>

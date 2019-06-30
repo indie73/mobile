@@ -1,13 +1,13 @@
 <template>
   <div>
-    <router-link :to="'add'" class="v-btn v-btn--floating v-btn--fixed v-btn--right v-btn--top theme--dark green add-btn" >
+    <router-link :to="'add'" class="v-btn v-btn--floating v-btn--small v-btn--absolute v-btn--right v-btn--top theme--dark green add-btn" >
       <div class="v-btn__content">
         <v-icon dark>add</v-icon>
       </div>
     </router-link>
     <v-flex goals-header>
       <v-avatar
-              :size="48"
+              :size="56"
               color="grey lighten-4"
       >
         <v-badge right
@@ -15,11 +15,13 @@
           <template v-slot:badge>
             <span>315</span>
           </template>
-          <img src="https://vuetifyjs.com/apple-touch-icon-180x180.png" alt="avatar">
+          <img :src="require('../assets/avatar.png')"
+               alt="avatar"
+          >
         </v-badge>
       </v-avatar>
       <div class="goals-header__name">
-        Вася
+        Дима Ефимов
       </div>
     </v-flex>
     <v-layout row>
@@ -185,6 +187,10 @@
 
   .v-btn--top:not(.v-btn--absolute) {
     top: 83px;
+  }
+
+  .v-btn--top.v-btn--absolute.v-btn--small {
+    top: 165px;
   }
 
   .add-btn .v-btn__content {
