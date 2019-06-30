@@ -41,14 +41,19 @@
               </v-list-tile-content>
 
               <v-list-tile-action>
-                <v-list-tile-sub-title>{{ item.current }} / {{ item.target }}</v-list-tile-sub-title>
+                <v-list-tile-sub-title v-if="item.target">{{ item.current }} / {{ item.target }}</v-list-tile-sub-title>
               </v-list-tile-action>
+              <div class="v-list__tile__heart">
+                <v-icon>favorites</v-icon>
+                <div class="v-list__tile__heart__count">+{{ item.ball }}</div>
+              </div>
             </v-list-tile>
 
             <v-divider></v-divider>
             <v-subheader>Выполненные</v-subheader>
 
             <v-list-tile
+                    class="is-checked"
                     v-for="item in performed"
                     :key="item.id"
                     avatar
@@ -58,11 +63,12 @@
                 <v-list-tile-title>{{ item.title }}</v-list-tile-title>
               </v-list-tile-content>
 
-              <v-list-tile-action>
-                <v-list-tile-sub-title>
-                  <v-icon>check</v-icon>
-                </v-list-tile-sub-title>
-              </v-list-tile-action>
+              <div class="v-list__tile__heart">
+                <v-icon
+                        color="green"
+                >favorites</v-icon>
+                <div class="v-list__tile__heart__count">+{{ item.ball }}</div>
+              </div>
             </v-list-tile>
           </v-list>
         </v-card>
@@ -88,7 +94,7 @@
           title: 'Сон(ч)',
           current: 5,
           target: 7,
-          ball: 1,
+          ball: 2,
           type: 0,
         },
         {
@@ -97,6 +103,12 @@
           current: '1:19',
           target: '2',
           ball: 1,
+          type: 1,
+        },
+        {
+          id: 3,
+          title: 'Участие в марафоне',
+          ball: 20,
           type: 1,
         },
         {
@@ -154,6 +166,8 @@
   }
 </script>
 
+
+
 <style>
   .v-list__tile__sub-title {
     text-align: right;
@@ -196,5 +210,31 @@
   .add-btn .v-btn__content {
     width: auto;
     height: auto;
+  }
+
+  .v-list__tile__heart {
+    position: relative;
+    overflow: hidden;
+    margin-left: 15px;
+    width: 30px;
+  }
+
+  .v-list__tile__heart .v-icon {
+    display: block;
+    font-size: 30px;
+  }
+
+  .v-list__tile__heart__count {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    margin-top: -1px;
+    font-size: 11px;
+    color: #fff;
+    transform: translate3d(-50%, -50%, 0);
+  }
+
+  .is-checked .v-list__tile__title {
+    text-decoration: line-through;
   }
 </style>
