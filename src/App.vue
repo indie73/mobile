@@ -180,4 +180,17 @@ export default {
   .buy_ball{
     top: 100px;
   }
+
+  .v-item-group.v-bottom-nav .v-btn--active {
+      padding-top: 8px;
+  }
+
+  .router-link-active .v-btn__content{
+    color: #009688 !important;
+    caret-color: #009688 !important;
+  }
+  .router-link-active .v-btn__content span{
+    font-weight: 500;
+  }
+
 </style>
