@@ -92,7 +92,7 @@ import axios from 'axios'
     },
     methods: {
       getGoals() {
-        axios.get('http://localhost:3000/api/v1/goals', {})
+        axios.get('http://84.201.164.253/api/v1/goals', {})
                 .then(response => {
                   this.current = response.data.current
                   this.performed = response.data.performed
