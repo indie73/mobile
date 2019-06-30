@@ -59,7 +59,7 @@
           ball: 3,
           src: 'https://med-magazin.ua/images/articles.1513966656.1.b.jpg',
           color: 'blue',
-          fator: 2
+          factor: 2
         },
         {
           id: 2,
@@ -68,7 +68,7 @@
           ball: 3,
           src: 'https://good-tips.pro/images/health/morning-workout.jpg',
           color: 'blue',
-          fator: 2
+          factor: 2
         },
         {
           id: 3,
@@ -77,7 +77,7 @@
           ball: 1,
           src: 'http://sportmagazin.net/upload/iblock/2ad/2adc3afeaf87e6e3b3b3434e3b8f8726.jpg',
           color: 'green',
-          fator: 2
+          factor: 2
         },
         {
           id: 4,
@@ -86,7 +86,7 @@
           ball: 100,
           src: 'https://bash.news/files/563FB20E786BB2F2.jpg',
           color: 'orange',
-          fator: 2
+          factor: 2
         }
       ]
      })
