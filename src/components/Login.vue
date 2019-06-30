@@ -1,6 +1,11 @@
 <template>
   <div class="login">
-    <h1>Вход</h1>
+    <h1>
+      <img
+              :src="require('../assets/logo.png')"
+              alt="">
+      Вход
+    </h1>
     <v-form>
       <div class="login__phone" v-if="!sendedSMS">
         <div class="login__phone__label">Ваш номер телефона:</div>
@@ -31,6 +36,41 @@
         <router-link :to="'home'" v-if="sendedSMS" class="v-btn theme--light">
           Подтвердить
         </router-link>
+      </div>
+      <div class="login__social">
+        <div class="login__social__title">
+          Войти с помощью соцсетей
+        </div>
+        <ul class="login__social__list">
+          <li>
+            <router-link :to="'home'">
+              <img
+                      :src="require('../assets/mail.svg')"
+                      alt="">
+            </router-link>
+          </li>
+          <li>
+            <router-link :to="'home'">
+              <img
+                      :src="require('../assets/facebook.svg')"
+                      alt="">
+            </router-link>
+          </li>
+          <li>
+            <router-link :to="'home'">
+              <img
+                      :src="require('../assets/vk.svg')"
+                      alt="">
+            </router-link>
+          </li>
+          <li>
+            <router-link :to="'home'">
+              <img
+                      :src="require('../assets/ok.svg')"
+                      alt="">
+            </router-link>
+          </li>
+        </ul>
       </div>
     </v-form>
   </div>
@@ -63,12 +103,20 @@
     margin-bottom: 30px;
   }
 
+  .login h1 img {
+    display: inline-block;
+    vertical-align: middle;
+    margin-top: -2px;
+    margin-right: 10px;
+    width: 40px;
+  }
+
   .login .v-form {
     text-align: center;
   }
 
   .login__logo {
-
+    margin-bottom: 15px;
   }
 
   .login__phone {
@@ -90,5 +138,29 @@
 
   .login__submit{
     text-align: center;
+  }
+
+  .login__social {
+    margin-top: 35px;
+  }
+
+  .login__social__title {
+    margin-bottom: 10px;
+  }
+
+  .login__social__list {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+  }
+
+  .login__social__list li {
+    display: inline-block;
+    vertical-align: middle;
+    margin: 0 10px;
+  }
+
+  .login__social__list li img {
+    width: 32px;
   }
 </style>
