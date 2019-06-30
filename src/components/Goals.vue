@@ -41,14 +41,19 @@
               </v-list-tile-content>
 
               <v-list-tile-action>
-                <v-list-tile-sub-title>{{ item.current }} / {{ item.target }}</v-list-tile-sub-title>
+                <v-list-tile-sub-title v-if="item.target">{{ item.current }} / {{ item.target }}</v-list-tile-sub-title>
               </v-list-tile-action>
+              <div class="v-list__tile__heart">
+                <v-icon>favorites</v-icon>
+                <div class="v-list__tile__heart__count">+{{ item.ball }}</div>
+              </div>
             </v-list-tile>
 
             <v-divider></v-divider>
             <v-subheader>Выполненные</v-subheader>
 
             <v-list-tile
+                    class="is-checked"
                     v-for="item in performed"
                     :key="item.id"
                     avatar
@@ -58,11 +63,12 @@
                 <v-list-tile-title>{{ item.title }}</v-list-tile-title>
               </v-list-tile-content>
 
-              <v-list-tile-action>
-                <v-list-tile-sub-title>
-                  <v-icon>check</v-icon>
-                </v-list-tile-sub-title>
-              </v-list-tile-action>
+              <div class="v-list__tile__heart">
+                <v-icon
+                        color="green"
+                >favorites</v-icon>
+                <div class="v-list__tile__heart__count">+{{ item.ball }}</div>
+              </div>
             </v-list-tile>
           </v-list>
         </v-card>
@@ -81,13 +87,12 @@ import axios from 'axios'
         performed: null
       }
     },
-    created () {
+    created() {
       this.getGoals()
     },
     methods: {
-      getGoals () {
-        axios.get('http://localhost:3000/api/v1/goals', {
-        })
+      getGoals() {
+        axios.get('http://localhost:3000/api/v1/goals', {})
                 .then(response => {
                   this.current = response.data.current
                   this.performed = response.data.performed
@@ -96,6 +101,8 @@ import axios from 'axios'
     }
   }
 </script>
+
+
 
 <style>
   .v-list__tile__sub-title {
@@ -139,5 +146,31 @@ import axios from 'axios'
   .add-btn .v-btn__content {
     width: auto;
     height: auto;
+  }
+
+  .v-list__tile__heart {
+    position: relative;
+    overflow: hidden;
+    margin-left: 15px;
+    width: 30px;
+  }
+
+  .v-list__tile__heart .v-icon {
+    display: block;
+    font-size: 30px;
+  }
+
+  .v-list__tile__heart__count {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    margin-top: -1px;
+    font-size: 11px;
+    color: #fff;
+    transform: translate3d(-50%, -50%, 0);
+  }
+
+  .is-checked .v-list__tile__title {
+    text-decoration: line-through;
   }
 </style>

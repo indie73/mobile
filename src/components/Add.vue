@@ -4,7 +4,7 @@
     <v-card class="add">
       <v-flex class="add__line">
         <v-select
-                :items="['Шаги','Велосипед','Плавание','Фитнес']"
+                :items="['Шаги(+1)','Велосипед(+1)','Плавание(+1)','Фитнес(+3)']"
                 label="Тип"
                 hide-details
         ></v-select>
