@@ -27,7 +27,7 @@
                 </v-layout>
                 <v-divider light></v-divider>
                 <v-flex xs12 text-xs-center>
-                 <v-btn large>
+                 <v-btn>
                     <div class="mr-2">Потратить</div>
                     <v-icon color="red" class="mr-2">favorite</v-icon>
                     <span class="subheading mr-2">50</span></v-btn>
@@ -55,7 +55,7 @@
                 </v-layout>
                 <v-divider light></v-divider>
                 <v-flex xs12 text-xs-center>
-                 <v-btn large>
+                 <v-btn>
                     <div class="mr-2">Потратить</div>
                     <v-icon color="red" class="mr-2">favorite</v-icon>
                     <span class="subheading mr-2">50</span></v-btn>
@@ -84,7 +84,7 @@
                 </v-layout>
                 <v-divider light></v-divider>
                 <v-flex xs12 text-xs-center>
-                 <v-btn large>
+                 <v-btn>
                     <div class="mr-2">Потратить</div>
                     <v-icon color="red" class="mr-2">favorite</v-icon>
                     <span class="subheading mr-2">40</span></v-btn>
@@ -113,7 +113,7 @@
                 </v-layout>
                 <v-divider light></v-divider>
                 <v-flex xs12 text-xs-center>
-                 <v-btn large>
+                 <v-btn>
                     <div class="mr-2">Потратить</div>
                     <v-icon color="red" class="mr-2">favorite</v-icon>
                     <span class="subheading mr-2">35</span></v-btn>

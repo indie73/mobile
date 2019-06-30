@@ -12,7 +12,7 @@
                   <v-flex xs7>
                     <v-card-title primary-title>
                       <div>
-                        <div class="title">Скандинавская ходьба</div>
+                        <div class="title mb-1">Скандинавская ходьба</div>
                         <div class="caption">с инструктором</div>
                       </div>
                     </v-card-title>
@@ -27,10 +27,16 @@
                 </v-layout>
                 <v-divider light></v-divider>
                 <v-flex xs12 text-xs-center>
-                 <v-btn large>
+                  <v-btn>
                     <div class="mr-2">Получить</div>
                     <v-icon color="red" class="mr-2">favorite</v-icon>
-                    <span class="subheading mr-2">3</span></v-btn>
+                    <span class="subheading">3</span>
+                  </v-btn>
+                  <v-btn>
+                    <v-icon color="" class="mr-2">group_add</v-icon>
+                    <v-icon color="red" class="">favorite</v-icon>
+                    <span class="caption">x</span><span class="subheading">2</span>
+                  </v-btn>
                 </v-flex>
               </v-card>
             </v-flex>
@@ -55,10 +61,16 @@
                 </v-layout>
                 <v-divider light></v-divider>
                 <v-flex xs12 text-xs-center>
-                 <v-btn large>
+                  <v-btn>
                     <div class="mr-2">Получить</div>
                     <v-icon color="red" class="mr-2">favorite</v-icon>
-                    <span class="subheading mr-2">3</span></v-btn>
+                    <span class="subheading">3</span>
+                  </v-btn>
+                  <v-btn>
+                    <v-icon color="" class="mr-2">group_add</v-icon>
+                    <v-icon color="red" class="">favorite</v-icon>
+                    <span class="caption">x</span><span class="subheading">2</span>
+                  </v-btn>
                 </v-flex>
               </v-card>
             </v-flex>
@@ -84,10 +96,16 @@
                 </v-layout>
                 <v-divider light></v-divider>
                 <v-flex xs12 text-xs-center>
-                 <v-btn large>
+                  <v-btn>
                     <div class="mr-2">Получить</div>
                     <v-icon color="red" class="mr-2">favorite</v-icon>
-                    <span class="subheading mr-2">1</span></v-btn>
+                    <span class="subheading">1</span>
+                  </v-btn>
+                  <v-btn>
+                    <v-icon color="" class="mr-2">group_add</v-icon>
+                    <v-icon color="red" class="">favorite</v-icon>
+                    <span class="caption">x</span><span class="subheading">2</span>
+                  </v-btn>
                 </v-flex>
               </v-card>
             </v-flex>
@@ -113,10 +131,16 @@
                 </v-layout>
                 <v-divider light></v-divider>
                 <v-flex xs12 text-xs-center>
-                 <v-btn large>
+                  <v-btn>
                     <div class="mr-2">Получить</div>
                     <v-icon color="red" class="mr-2">favorite</v-icon>
-                    <span class="subheading mr-2">100</span></v-btn>
+                    <span class="subheading">100</span>
+                  </v-btn>
+                  <v-btn>
+                    <v-icon color="" class="mr-2">group_add</v-icon>
+                    <v-icon color="red" class="">favorite</v-icon>
+                    <span class="caption">x</span><span class="subheading">2</span>
+                  </v-btn>
                 </v-flex>
               </v-card>
             </v-flex>
