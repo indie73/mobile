@@ -48,51 +48,34 @@
       </v-card>
   </div>
 </template>
+
 <script>
+  import axios from 'axios'
+
   export default {
-    data: () => ({
-      events: [
-        {
-          id: 1,
-          title: 'Скандинавская ходьба',
-          caption: 'с инструктором',
-          ball: 3,
-          src: 'https://med-magazin.ua/images/articles.1513966656.1.b.jpg',
-          color: 'blue',
-          factor: 2
-        },
-        {
-          id: 2,
-          title: 'Фитнес зарядка (утренняя)',
-          caption: 'на траве стадиона Старт',
-          ball: 3,
-          src: 'https://good-tips.pro/images/health/morning-workout.jpg',
-          color: 'blue',
-          factor: 2
-        },
-        {
-          id: 3,
-          title: 'Велопрокат',
-          caption: 'катание на ролика, катание на коньках',
-          ball: 1,
-          src: 'http://sportmagazin.net/upload/iblock/2ad/2adc3afeaf87e6e3b3b3434e3b8f8726.jpg',
-          color: 'green',
-          factor: 2
-        },
-        {
-          id: 4,
-          title: 'Эстафета',
-          caption: 'районная эстафета',
-          ball: 100,
-          src: 'https://bash.news/files/563FB20E786BB2F2.jpg',
-          color: 'orange',
-          factor: 2
-        }
-      ]
-     })
+    data () {
+      return {
+        events: null
+      }
+    },
+    created() {
+      this.getEvents()
+    },
+    methods: {
+      getEvents() {
+        axios.get('http://84.201.164.253/api/v1/events', {})
+                .then(response => {
+                  this.events = response.data.events
+                })
+      }
+    }
   }
 </script>
 
 <style>
-  
+
+</style>
+
+<style>
+
 </style>
