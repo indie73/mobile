@@ -83,12 +83,92 @@ import axios from 'axios'
   export default {
     data () {
       return {
-        current: null,
-        performed: null
+		  current: [
+			  {
+				  id: 1,
+				  title: 'Шаги',
+				  current: 3548,
+				  target: 5000,
+				  ball: 1,
+				  type: 0,
+			  },
+			  {
+				  id: 2,
+				  title: 'Сон(ч)',
+				  current: 5,
+				  target: 7,
+				  ball: 2,
+				  type: 0,
+			  },
+			  {
+				  id: 3,
+				  title: 'Использование смартфона(ч)',
+				  current: '1:19',
+				  target: '2',
+				  ball: 1,
+				  type: 1,
+			  },
+			  {
+				  id: 3,
+				  title: 'Участие в марафоне',
+				  ball: 20,
+				  type: 1,
+			  },
+			  {
+				  id: 4,
+				  title: 'Шаги',
+				  current: 3548,
+				  target: 5000,
+				  ball: 1,
+				  type: 0,
+			  },
+			  {
+				  id: 5,
+				  title: 'Сон(ч)',
+				  current: 5,
+				  target: 7,
+				  ball: 1,
+				  type: 0,
+			  },
+			  {
+				  id: 6,
+				  title: 'Использование смартфона(ч)',
+				  current: '1:19',
+				  target: '2',
+				  ball: 1,
+				  type: 1,
+			  },
+		  ],
+		  performed: [
+			  {
+				  id: 7,
+				  title: 'Шаги',
+				  current: 3548,
+				  target: 5000,
+				  ball: 1,
+				  type: 0,
+			  },
+			  {
+				  id: 8,
+				  title: 'Сон(ч)',
+				  current: 5,
+				  target: 7,
+				  ball: 1,
+				  type: 0,
+			  },
+			  {
+				  id: 9,
+				  title: 'Использование смартфона(ч)',
+				  current: '1:19',
+				  target: '2',
+				  ball: 1,
+				  type: 1,
+			  },
+		  ],
       }
     },
     created() {
-      this.getGoals()
+      // this.getGoals()
     },
     methods: {
       getGoals() {
